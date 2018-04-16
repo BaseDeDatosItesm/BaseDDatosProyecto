@@ -18,9 +18,8 @@
 		    die("Connection failed: " . mysqli_connect_error());
 		}
 
-		$ssnLook = $_GET['txtSSN'];
 
-		$sql = "SELECT ssn, fname, sex FROM employee WHERE $ssnLook = ssn";
+		$sql = "SELECT ssn, fname, sex FROM employee";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
@@ -35,7 +34,7 @@
 		mysqli_close($conn);
 	?>
 	</form>
-	<form name = "goBack" action = "inicio.php">
+  <form name = "goBack" action = "inicio.php">
 		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
 </body>

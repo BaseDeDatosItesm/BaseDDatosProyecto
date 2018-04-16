@@ -3,7 +3,7 @@
 <head>
 	<title>REGISTRO</title>
     <style type="text/css">
-    
+
         H1
         {
             margin-top: 75px;
@@ -11,16 +11,16 @@
             color:darkcyan;
             font-family: "Impact", Charcoal, sans-serif;
             font-size: 20pt;
-            padding-bottom: 2px;        
+            padding-bottom: 2px;
         }
-        
+
         body
         {
             background-image: url("https://i.imgur.com/G95fuYj.png");
             background-repeat: :no-repeat;
             background-size: 100% 140%;
         }
-        
+
         form
         {
              margin-top: 50px;
@@ -29,33 +29,37 @@
             font-family: "Impact", Charcoal, sans-serif;
             font-size: 20pt;
             padding-bottom: 2px;
-            
-            
+
+
         }
-        
-  
-        
-        
+
+
+
+
     </style>
 </head>
 <body>
-	
+
     <H1>Datos del usuario <br></H1>
 
-	<form name = "userData" method="GET" id="id" action="insert.php">  
+	<form name = "userData" method="GET" id="id" action="insert.php">
 		Identificador: <input type="text" name="txtId"> <br>
-		Primer Nombre: <input type="text" name="txtFn"> <br>	
-		Apellido: <input type="text" name="txtLn"> <br>	
-		Clave: <input type="text" name="txtPsw"> <br>	
+		Primer Nombre: <input type="text" name="txtFn"> <br>
+		Apellido: <input type="text" name="txtLn"> <br>
+		Clave: <input type="text" name="txtPsw"> <br>
 		Sex:
 		<select name="selectSex">
 		<option value="M">Masculino</option>
 		<option value="F">Femenino</option>
-		</select> <br>	
-		Correo Electronico: <input type="email" name="txtEmail"><br>	
+		</select> <br>
+		Correo Electronico: <input type="email" name="txtEmail"><br>
 		Fecha de Nacimiento: <input type="date" name="txtBdate"> <br>
-	
+
 		<input type="submit" value= "Registrar" name="btnRegistro">
+	</form>
+
+	<form name = "goBack" action = "inicio.php">
+		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
 
 </body>
