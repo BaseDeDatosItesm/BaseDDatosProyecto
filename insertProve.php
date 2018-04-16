@@ -4,7 +4,7 @@
 	<title>Insert Proveedor</title>
 </head>
 <body>
-	<?php 
+	<?php
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
@@ -16,13 +16,13 @@
 		if (!$conn) {
 		    die("Connection failed: " . mysqli_connect_error());
 		}
-		
+
 		$id = $_POST['txtCodigo'];
 		$name = $_POST['txtName'];
 		$email = $_POST['txtEmail'];
 		$direccion = $_POST['txtDirec'];
 
-		$sql = "INSERT INTO proyectos VALUES ('$id', '$name', '$email', '$direccion')";
+		$sql = "INSERT INTO proveedores VALUES ('$id', '$name', '$email', '$direccion')";
 
 		if (mysqli_query($conn, $sql)){
 			echo "Nuevo proyecto registrado correctamente";
