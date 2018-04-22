@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>INSERT</title>
+	<title>INSERT USER</title>
 </head>
 <body>
 	<form>
@@ -9,7 +9,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "example";
+		$dbname = "sistemainv";
 
 		// Create connection
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -17,8 +17,8 @@
 		if (!$conn) {
 		    die("Connection failed: " . mysqli_connect_error());
 		}
-		
-		//We get the values from registro.php's text boxes and assign them to variables 
+
+		//We get the values from registro.php's text boxes and assign them to variables
 		$id = $_GET['txtId'];
 		$fname = $_GET['txtFn'];
 		$lname = $_GET['txtLn'];
@@ -27,10 +27,10 @@
 		$email = $_GET['txtEmail'];
 		$bdate = $_GET['txtBdate'];
 
-		
+
 		//We use the previous variables to make the INSERT into the database
 		//Also, we create a variable to store the INSERT command for further use in another methods
-		$sql = "INSERT INTO usuarios (id, fname, lname, password, sex, email, bdate)
+		$sql = "INSERT INTO usuario
 		VALUES ('$id', '$fname', '$lname', '$psw', '$sex', '$email', '$bdate')";
 
 		if (mysqli_query($conn, $sql)) {

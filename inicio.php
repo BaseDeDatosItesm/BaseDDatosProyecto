@@ -102,6 +102,26 @@
 	</td>
 	</tr>
 
+	<tr>
+	  <td>Registro de Articulos</td>
+	  <td>
+	  	<form action="registroArticulos.php">
+    		<input type="submit" value="Check" />
+		</form>
+	</td>
+	</tr>
+
+	<tr>
+	  <td>Registro de Movimientos</td>
+	  <td>
+	  	<form action="registroMov.php">
+    		<input type="submit" value="Check" />
+		</form>
+	</td>
+	</tr>
+
+
+
 	</table>
 
 </body>

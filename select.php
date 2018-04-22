@@ -9,7 +9,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "company1";
+		$dbname = "sistemainv";
 
 		// Create connection
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -20,7 +20,7 @@
 
 		$ssnLook = $_GET['txtSSN'];
 
-		$sql = "SELECT ssn, fname, sex FROM employee WHERE $ssnLook = ssn";
+		$sql = "SELECT codigo, nombre, direccion_sucursal, e-mail FROM employee WHERE $ssnLook = codigo";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {

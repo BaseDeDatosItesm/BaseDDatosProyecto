@@ -8,7 +8,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "example";
+		$dbname = "sistemainv";
 
 		// Create connection
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -22,7 +22,7 @@
 		$email = $_POST['txtEmail'];
 		$direccion = $_POST['txtDirec'];
 
-		$sql = "INSERT INTO proveedores VALUES ('$id', '$name', '$email', '$direccion')";
+		$sql = "INSERT INTO proveedor VALUES ('$id', '$name', '$direccion', '$email')";
 
 		if (mysqli_query($conn, $sql)){
 			echo "Nuevo proyecto registrado correctamente";

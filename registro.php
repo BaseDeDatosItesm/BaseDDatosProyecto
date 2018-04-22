@@ -46,13 +46,13 @@
 		Identificador: <input type="text" name="txtId"> <br>
 		Primer Nombre: <input type="text" name="txtFn"> <br>
 		Apellido: <input type="text" name="txtLn"> <br>
-		Clave: <input type="text" name="txtPsw"> <br>
 		Sex:
 		<select name="selectSex">
 		<option value="M">Masculino</option>
 		<option value="F">Femenino</option>
 		</select> <br>
 		Correo Electronico: <input type="email" name="txtEmail"><br>
+		Contraseña: <input type="text" name="txtPsw"> <br>
 		Fecha de Nacimiento: <input type="date" name="txtBdate"> <br>
 
 		<input type="submit" value= "Registrar" name="btnRegistro">
