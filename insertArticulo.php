@@ -25,8 +25,9 @@
   $cantMax = $_GET['numCntMax'];
   $cantMin = $_GET['numCntMin'];
   $puntoReorden = $_GET['numPR'];
+  $cat = $_GET['selectCat'];
 
-  $sql = "INSERT INTO articulo VALUES ('$sku', '$cost', '$description', '$tipoMed', '$name', '$cantMax', '$cantMin', '$puntoReorden')";
+  $sql = "INSERT INTO articulo VALUES ('$sku', '$cost', '$description', '$tipoMed', '$name', '$cantMax', '$cantMin', '$puntoReorden',0,'$cat')";
 
   if (mysqli_query($conn, $sql)){
     echo "Nuevo articulo registrado correctamente";

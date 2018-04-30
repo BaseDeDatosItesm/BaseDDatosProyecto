@@ -46,7 +46,7 @@
 
 	<form name="regProve" action="insertProve.php" method="POST">
 
-		Codigo: <input type="text" name="txtCodigo"> <br>
+		Codigo: <input type="text" name="txtCodigo" placeholder="Clave de 9 digitos"> <br>
 		Nombre del proveedor: <input type="text" name="txtName"> <br>
 		Correo Electronico: <input type="email" name="txtEmail"> <br>
 		Direccion de la sucursal: <input type="text" name="txtDirec"> <br>

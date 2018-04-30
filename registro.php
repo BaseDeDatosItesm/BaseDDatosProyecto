@@ -43,7 +43,7 @@
     <H1>Datos del usuario <br></H1>
 
 	<form name = "userData" method="GET" id="id" action="insert.php">
-		Identificador: <input type="text" name="txtId"> <br>
+		Identificador: <input type="text" name="txtId" placeholder="Clave de 4 digitos"> <br>
 		Primer Nombre: <input type="text" name="txtFn"> <br>
 		Apellido: <input type="text" name="txtLn"> <br>
 		Sex:

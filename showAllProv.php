@@ -60,7 +60,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "company1";
+		$dbname = "sistemainv";
 
 		// Create connection
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -70,13 +70,14 @@
 		}
 
 
-		$sql = "SELECT ssn, fname, sex FROM employee";
+		$sql = "SELECT Codigo, Nombre, Direccion_Sucursal FROM proveedor";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 		    // output data of each row
+
 		    while($row = mysqli_fetch_assoc($result)) {
-		        echo "ssn: " . $row["ssn"]. " - Name: " . $row["fname"]. " Sex:  " . $row["sex"]. "<br>";
+		        echo "Codigo: " . $row["Codigo"]. " | Nombre : " . $row["Nombre"]. " |Direccion:  " . $row["Direccion_Sucursal"]."<br>";
 		    }
 		} else {
 		    echo "0 results";

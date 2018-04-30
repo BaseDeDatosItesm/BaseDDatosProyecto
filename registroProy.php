@@ -42,7 +42,7 @@
 
 	<form name="regProy" action="insertProy.php" method="POST">
 
-		Identificador <input type="text" name="txtId"> <br>
+		Identificador <input type="text" name="txtId" placeholder="Clave de 4 digitos"> <br>
 		Nombre del proyecto: <input type="text" name="txtName"> <br>
 		Fecha de inicio: <input type="date" name="txtDate"> <br>
 		Descripcion del proyecto: <input type="text" name="txtDesc"> <br>

@@ -49,7 +49,26 @@
         {
             background-color: #fff;
         }*/
+        .vertical-menu {
+            width: 200px; /* Set a width if you like */
+        }
 
+        .vertical-menu a {
+            background-color: #eee; /* Grey background color */
+            color: black; /* Black text color */
+            display: block; /* Make the links appear below each other */
+            padding: 12px; /* Add some padding */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .vertical-menu a:hover {
+            background-color: #ccc; /* Dark grey background on mouse-over */
+        }
+
+        .vertical-menu a.active {
+            background-color: #4CAF50; /* Add a green color to the "active/current" link */
+            color: white;
+        }
 
 
     </style>
@@ -74,6 +93,15 @@
 		</form>
 	</td>
 	</tr>
+
+    <tr>
+        <td>Consulta de Usuarios</td>
+        <td>
+            <form action="indiceUser.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
 
 	<tr class = "diffColor">
 	  <td>Registro de Usuario</td>
@@ -120,9 +148,62 @@
 	</td>
 	</tr>
 
+    <tr>
+        <td>Movimientos por periodo</td>
+        <td>
+            <form action="checkMov.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Consulta de Material Agotado</td>
+        <td>
+            <form action="selectAgotado.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Consulta de Material Escaso</td>
+        <td>
+            <form action="selectEscaso.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Consulta de Material Suficiente</td>
+        <td>
+            <form action="selectSuf.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Consulta de Inventario Actual</td>
+        <td>
+            <form action="selectInv.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
 
 
 	</table>
+
+    <div class="vertical-menu">
+        <a href="inicio.php" class="active">Home</a>
+        <a href="consulta.php">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </div>
 
 </body>
 </html>

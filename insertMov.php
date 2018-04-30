@@ -31,13 +31,19 @@
     $sku = $_POST['txtSKU'];
 
 
+
 		//We use the previous variables to make the INSERT into the database
 		//Also, we create a variable to store the INSERT command for further use in another methods
 		$sql = "INSERT INTO movimiento
-		VALUES (NULL, '$cat', '$hora', '$fecha','$tipo' ,'$user', '$project')";
+		VALUES (NULL, '$cat', '$hora', '$fecha','$tipo' ,'$user', '$project','$sku')";
+
+
+
 
 		if (mysqli_query($conn, $sql)) {
 		    echo "New movement created successfully";
+
+
 
 		} else {
 		    echo "Error: " . $sql . "<br>" . mysqli_error($conn);

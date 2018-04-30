@@ -25,7 +25,7 @@
 		$sql = "INSERT INTO proveedor VALUES ('$id', '$name', '$direccion', '$email')";
 
 		if (mysqli_query($conn, $sql)){
-			echo "Nuevo proyecto registrado correctamente";
+			echo "Nuevo proveedor registrado correctamente";
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 		}
