@@ -58,7 +58,7 @@
 		<input type="submit" value= "Registrar" name="btnRegistro">
 	</form>
 
-	<form name = "goBack" action = "inicio.php">
+	<form name = "goBack" action = "inicioReal.php">
 		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
 

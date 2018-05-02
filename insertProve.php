@@ -32,7 +32,7 @@
 		mysqli_close($conn);
 	?>
 
-	<form name = "goBack" action = "inicio.php">
+	<form name = "goBack" action = "inicioReal.php">
 		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
 

@@ -21,7 +21,7 @@
 		//We get the values from registro.php's text boxes and assign them to variables
 
 		$tipo = $_POST['selectType'];
-		$cat = $_POST['txtCat'];
+		$cat = $_POST['selectCat'];
 		$hora = $_POST['txtTime'];
 		$fecha = $_POST['txtDate'];
 		$user = $_POST['txtIdUser'];
@@ -35,7 +35,7 @@
 		//We use the previous variables to make the INSERT into the database
 		//Also, we create a variable to store the INSERT command for further use in another methods
 		$sql = "INSERT INTO movimiento
-		VALUES (NULL, '$cat', '$hora', '$fecha','$tipo' ,'$user', '$project','$sku')";
+		VALUES (NULL, '$cat', '$hora', '$fecha','$tipo' ,'$user', '$project','$sku',$quantity)";
 
 
 
@@ -82,7 +82,7 @@
 		?>
 	</form>
 
-	<form name = "goBack" action = "inicio.php">
+	<form name = "goBack" action = "inicioReal.php">
 		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
 

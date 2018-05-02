@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>INICIO</title>
+    <meta charset="UTF-8">
+    <title>SISTEMAINV</title>
     <style type="text/css">
 
         body
@@ -72,141 +73,59 @@
 
 
     </style>
-
 </head>
 <body>
-    <div class="test-box"></div>
-	<h1>SISTEMA DE INVENTARIOS</h1>
+<div class="test-box"></div>
+<h1>SISTEMA DE INVENTARIOS</h1>
 
-	<table align = "center">
-	<tr>
-	  <th colspan="2"><strong>Bienvenido</strong></th>
-	  <th><strong> </strong></th>
-
-	</tr>
-
-	<tr>
-	  <td>Consulta de Proveedores</td>
-	  <td>
-	  	<form action="indice.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
+<table align = "center">
     <tr>
-        <td>Consulta de Usuarios</td>
-        <td>
-            <form action="indiceUser.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
+        <th colspan="2"><strong>Bienvenido</strong></th>
+        <th><strong> </strong></th>
+
     </tr>
 
-	<tr class = "diffColor">
-	  <td>Registro de Usuario</td>
-	  <td>
-	  	<form action="registro.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
+    <tr>
+        <th colspan="2"><strong>¿Que desea hacer?</strong></th>
+        <th><strong> </strong></th>
 
-	 <tr>
-	  <td>Registro de Proyectos</td>
-	  <td>
-	  	<form action="registroProy.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Proveedores</td>
-	  <td>
-	  	<form action="registroProve.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Articulos</td>
-	  <td>
-	  	<form action="registroArticulos.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Movimientos</td>
-	  <td>
-	  	<form action="registroMov.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
+    </tr>
 
     <tr>
-        <td>Movimientos por periodo</td>
+        <td>Generar un nuevo Registro</td>
         <td>
-            <form action="checkMov.php">
+            <form action="inserts.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
 
     <tr>
-        <td>Consulta de Material Agotado</td>
+        <td>Modificar un registro existente</td>
         <td>
-            <form action="selectAgotado.php">
+            <form action="updates.php">
+                <input type="submit" value="Check" />
+            </form>
+        </td>
+    </tr>
+
+    <tr class = "diffColor">
+        <td>Eliminar un registro existente</td>
+        <td>
+            <form action="deletes.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
 
     <tr>
-        <td>Consulta de Material Escaso</td>
+        <td>Consultar un reporte</td>
         <td>
-            <form action="selectEscaso.php">
+            <form action="consultas.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
-
-    <tr>
-        <td>Consulta de Material Suficiente</td>
-        <td>
-            <form action="selectSuf.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-    <tr>
-        <td>Consulta de Inventario Actual</td>
-        <td>
-            <form action="selectInv.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-    <tr>
-        <td>Generacion de vale solicitud de material</td>
-        <td>
-            <form action="checkSolicitante.html">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-
-
-	</table>
-
-
 
 </body>
 </html>

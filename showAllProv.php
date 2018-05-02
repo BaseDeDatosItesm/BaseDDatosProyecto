@@ -70,14 +70,51 @@
 		}
 
 
-		$sql = "SELECT Codigo, Nombre, Direccion_Sucursal FROM proveedor";
+        echo <<< HTML
+<br>
+ <center>
+
+ 
+<br>
+	<table id="encabezado">
+	<tr>
+			<th>LISTA DE PROVEEDORES</th>
+	</tr>
+	</table>
+	<table id="listado">
+		<tr>
+			<th>Codigo</th>
+			<th>Nombre</th>
+			<th>Direccion</th>
+			<th>E-Mail</th>
+			
+		</tr>
+HTML;
+
+
+		$sql = "SELECT Codigo, Nombre, Direccion_Sucursal, email FROM proveedor";
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) > 0) {
 		    // output data of each row
 
-		    while($row = mysqli_fetch_assoc($result)) {
-		        echo "Codigo: " . $row["Codigo"]. " | Nombre : " . $row["Nombre"]. " |Direccion:  " . $row["Direccion_Sucursal"]."<br>";
+		    while($row = mysqli_fetch_array($result)) {
+		        //echo "Codigo: " . $row["Codigo"]. " | Nombre : " . $row["Nombre"]. " |Direccion:  " . $row["Direccion_Sucursal"]."<br>";
+                $code = $row[0];
+                $name = $row[1];
+                $address = $row[2];
+                $mail = $row[3];
+
+                echo <<< HTML
+	
+		<tr>
+			<td>$code</td>
+			<td>$name</td>
+			<td>$address</td>
+			<td>$mail</td>
+			
+		</tr>
+HTML;
 		    }
 		} else {
 		    echo "0 results";
@@ -86,8 +123,8 @@
 		mysqli_close($conn);
 	?>
 	</form>
-  <form name = "goBack" action = "inicio.php">
-		<input type="submit" value= "Regresar a Inicio" name="btnBack">
+  <form name = "goBack" action = "inicioReal.php">
+		<input type="submit" value= "Inicio" name="btnBack">
 	</form>
 </body>
 </html>

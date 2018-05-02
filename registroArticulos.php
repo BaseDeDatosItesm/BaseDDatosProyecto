@@ -2,6 +2,41 @@
 <html>
   <head>
     <title>TEST</title>
+      <style type="text/css">
+
+          H1
+          {
+              margin-top: 75px;
+              text-align: center;
+              color:darkcyan;
+              font-family: "Impact", Charcoal, sans-serif;
+              font-size: 20pt;
+              padding-bottom: 2px;
+          }
+
+          body
+          {
+              background-image: url("https://i.imgur.com/G95fuYj.png");
+              background-repeat: :no-repeat;
+              background-size: 100% 140%;
+          }
+
+          form
+          {
+              margin-top: 50px;
+              text-align: center;
+              color:darkcyan;
+              font-family: "Impact", Charcoal, sans-serif;
+              font-size: 20pt;
+              padding-bottom: 2px;
+
+
+          }
+
+
+
+
+      </style>
   </head>
   <body>
     <form name="registro" action="insertArticulo.php" method="GET">
@@ -24,7 +59,7 @@
 
       <input type="submit" name="btnRegistrar" value="Registrar">
     </form>
-    <form name = "goBack" action = "inicio.php">
+    <form name = "goBack" action = "inicioReal.php">
   		<input type="submit" value= "Regresar a Inicio" name="btnBack">
   	</form>
   </body>

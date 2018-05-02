@@ -59,8 +59,8 @@
 /**
  * Created by PhpStorm.
  * User: Eduardo
- * Date: 27/04/2018
- * Time: 08:39 AM
+ * Date: 01/05/2018
+ * Time: 01:31 PM
  */
 $servername = "localhost";
 $username = "root";
@@ -73,6 +73,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+$user = $_GET['txtSSN'];
+$date = $_GET['selectDate'];
+$hoy = date("H:i:s");
+//$date = date('l jS \of F Y h:i:s A');
 
 echo <<< HTML
 <br>
@@ -82,52 +86,88 @@ echo <<< HTML
 <br>
 	<table id="encabezado">
 	<tr>
-			<th>Movimientos por Periodo</th>
+			<th>VALE DE SOLICITUD DE MATERIAL</th>
 	</tr>
+	<tr>
+	    <td>
+	        Fecha: $date<br>
+	        Hora: $hoy
+        </td>	
+    </tr>
+	
+	
 	</table>
 	<table id="listado">
 		<tr>
-			<th>Clave</th>
-			<th>Categoria</th>
-			<th>Hora</th>
-			<th>Fecha</th>
-			<th>Tipo</th>
-			<th>Usuario</th>
+			<th>SKU</th>
+			<th>Nombre articulo</th>
+			<th>Cantidad</th>
 			<th>Proyecto</th>
 			
 		</tr>
 HTML;
 
-$date= $_GET['selectDate'];
-$sql = "SELECT Clave_Mov, Categoria_Mov, Hora_Mov, Fecha_Mov, Tipo_Mov, ID_User, ID_Proyecto FROM movimiento 
-        WHERE Fecha_Mov LIKE '%$date%' ";
+
+
+
+$sql = "SELECT articulo.SKU_Articulo, articulo.Nombre, movimiento.quantity, movimiento.ID_Proyecto
+FROM movimiento, articulo
+WHERE movimiento.Categoria_Mov = 'Prestamo'
+AND movimiento.SKU = articulo.SKU_Articulo
+AND movimiento.Fecha_Mov LIKE '%$date%'
+AND movimiento.ID_User = $user";
 $result = mysqli_query($conn, $sql);
+
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
 
     while($row = mysqli_fetch_array($result)) {
         //echo "Codigo: " . $row["Codigo"]. " | Nombre : " . $row["Nombre"]. " |Direccion:  " . $row["Direccion_Sucursal"]."<br>";
-        $clave = $row[0];
-        $cat = $row[1];
-        $hora = $row[2];
-        $fecha = $row[3];
-        $tipo = $row[4];
-        $user = $row[5];
-        $proy = $row[6];
-
+        $code = $row[0];
+        $name = $row[1];
+        $qty = $row[2];
+        $pro = $row[3];
 
         echo <<< HTML
+        
+        
 	
 		<tr>
-			<td>$clave</td>
-			<td>$cat</td>
-			<td>$hora</td>
-			<td>$fecha</td>
-			<td>$tipo</td>
-			<td>$user</td>
-			<td>$proy</td>
+			<td>$code</td>
+			<td>$name</td>
+			<td>$qty</td>
+			<td>$pro</td>
 			
 		</tr>
+		
+        <table>
+            <tr>
+               <td>
+                
+               </td> 
+            </tr>
+            
+            <tr>
+		        <td>Clave de usuario: $user
+		        </td>
+		        
+		    </tr>
+		    <tr>
+		        <td>
+		            Firma de entregado: _____________
+                </td>
+		    </tr>
+		    
+		    
+		    
+        
+        </table>
+        <br>
+        <form name = "goBack" action = "inicioReal.php">
+                    <input type="submit" value= "Inicio" name="btnBack">
+                </form>
+        
+
 HTML;
     }
 } else {
@@ -136,11 +176,7 @@ HTML;
 
 mysqli_close($conn);
 ?>
-
-
-</body>
-
-
-<form name = "goBack" action = "inicioReal.php">
-    <input type="submit" value= "Inicio" name="btnBack">
 </form>
+</body>
+</html>
+

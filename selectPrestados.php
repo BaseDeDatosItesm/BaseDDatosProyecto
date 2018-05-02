@@ -78,24 +78,32 @@
 <br>
 	<table id="encabezado">
 	<tr>
-			<th>LISTA DE PROVEEDORES</th>
+			<th>PRODUCTOS PRESTADOS</th>
 	</tr>
 	</table>
 	<table id="listado">
 		<tr>
-			<th>Codigo</th>
-			<th>Nombre</th>
-			<th>Direccion</th>
-			<th>E-Mail</th>
+			<th>Fecha de prestamo </th>
+			<th>Nombre del articulo</th>
+			<th>Usuario</th>
+			
+		
+			
+			
 			
 		</tr>
 HTML;
 
 
-    $ssnLook = $_GET['txtSSN'];
 
-    $sql = "SELECT Codigo, Nombre, Direccion_Sucursal, email FROM proveedor WHERE $ssnLook = codigo";
+
+    $sql = "SELECT movimiento.Fecha_Mov, articulo.Nombre, CONCAT(usuario.Nombre,' ',usuario.Apellido) AS Usuario 
+    FROM movimiento, usuario, articulo 
+    WHERE movimiento.ID_User = usuario.ID AND movimiento.SKU = articulo.SKU_Articulo AND movimiento.Categoria_Mov = 'Prestamo'";
     $result = mysqli_query($conn, $sql);
+
+
+
 
 
     if (mysqli_num_rows($result) > 0) {
@@ -105,16 +113,18 @@ HTML;
             //echo "Codigo: " . $row["Codigo"]. " | Nombre : " . $row["Nombre"]. " |Direccion:  " . $row["Direccion_Sucursal"]."<br>";
             $code = $row[0];
             $name = $row[1];
-            $address = $row[2];
-            $email = $row[3];
+            $desc = $row[2];
+
+
 
             echo <<< HTML
 	
 		<tr>
 			<td>$code</td>
 			<td>$name</td>
-			<td>$address</td>
-			<td>$email</td>
+			<td>$desc</td>
+			
+			
 			
 		</tr>
 HTML;
@@ -131,4 +141,3 @@ HTML;
 </form>
 </body>
 </html>
-

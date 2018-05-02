@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
-	<title>INICIO</title>
+    <title>DELETES</title>
+
     <style type="text/css">
 
         body
@@ -72,131 +73,45 @@
 
 
     </style>
-
 </head>
 <body>
-    <div class="test-box"></div>
-	<h1>SISTEMA DE INVENTARIOS</h1>
+<div class="test-box"></div>
+<h1>Nuevos Registros</h1>
 
-	<table align = "center">
-	<tr>
-	  <th colspan="2"><strong>Bienvenido</strong></th>
-	  <th><strong> </strong></th>
+<table align = "center">
 
-	</tr>
 
-	<tr>
-	  <td>Consulta de Proveedores</td>
-	  <td>
-	  	<form action="indice.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-    <tr>
-        <td>Consulta de Usuarios</td>
+    <tr class = "diffColor">
+        <td>Modificar Usuario</td>
         <td>
-            <form action="indiceUser.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-	<tr class = "diffColor">
-	  <td>Registro de Usuario</td>
-	  <td>
-	  	<form action="registro.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	 <tr>
-	  <td>Registro de Proyectos</td>
-	  <td>
-	  	<form action="registroProy.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Proveedores</td>
-	  <td>
-	  	<form action="registroProve.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Articulos</td>
-	  <td>
-	  	<form action="registroArticulos.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-	<tr>
-	  <td>Registro de Movimientos</td>
-	  <td>
-	  	<form action="registroMov.php">
-    		<input type="submit" value="Check" />
-		</form>
-	</td>
-	</tr>
-
-    <tr>
-        <td>Movimientos por periodo</td>
-        <td>
-            <form action="checkMov.php">
+            <form action="updateUser.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
 
     <tr>
-        <td>Consulta de Material Agotado</td>
+        <td>Modificar Proyecto</td>
         <td>
-            <form action="selectAgotado.php">
+            <form action="updateProy.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
 
     <tr>
-        <td>Consulta de Material Escaso</td>
+        <td>Modificar Proveedor</td>
         <td>
-            <form action="selectEscaso.php">
+            <form action="updateProv.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
     </tr>
 
     <tr>
-        <td>Consulta de Material Suficiente</td>
+        <td>Modificar Articulo</td>
         <td>
-            <form action="selectSuf.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-    <tr>
-        <td>Consulta de Inventario Actual</td>
-        <td>
-            <form action="selectInv.php">
-                <input type="submit" value="Check" />
-            </form>
-        </td>
-    </tr>
-
-    <tr>
-        <td>Generacion de vale solicitud de material</td>
-        <td>
-            <form action="checkSolicitante.html">
+            <form action="updateArt.php">
                 <input type="submit" value="Check" />
             </form>
         </td>
@@ -204,7 +119,18 @@
 
 
 
-	</table>
+    <tr>
+        <td colspan="2">
+            <form name = "goBack" action = "inicioReal.php">
+                <input type="submit" value= "Inicio" name="btnBack">
+            </form>
+        </td>
+    </tr>
+</table>
+
+
+
+
 
 
 

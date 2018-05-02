@@ -40,7 +40,7 @@
 		<input type="submit" value= "MostrarTodos" name="btnShowAll">
 	</form>
 
-	<form name = "goBack" action = "inicio.php">
+	<form name = "goBack" action = "inicioReal.php">
 
 		<input type="submit" value= "Regresar a Inicio" name="btnBack">
 	</form>
